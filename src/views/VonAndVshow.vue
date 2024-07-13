@@ -7,7 +7,7 @@ export default{
     components:{
         von,
         vshow,
-        vmodal
+        vmodal,
     }
 }
 </script>

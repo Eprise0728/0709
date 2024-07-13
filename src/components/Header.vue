@@ -13,6 +13,8 @@ export default{
         <RouterLink to="/VtestAndVmodel" class="routeItem">VtestAndVmodel</RouterLink>
         <RouterLink to="/VforAndVbind" class="routeItem">VforAndVbind</RouterLink>
         <RouterLink to="/VonAndVshow" class="routeItem">VonAndVshow</RouterLink>
+        <RouterLink to="/Props" class="routeItem">Props</RouterLink>
+        <RouterLink to="/Emit" class="routeItem">Emit</RouterLink>
     </div>
 </template>
 
@@ -21,7 +23,8 @@ export default{
     width: 100%;
     height: 100%;
     background-color: rgb(66,105,135);
-
+    display: flex;
+    flex-wrap: wrap;
     .routeItem{
         margin-left: 10%;
         font-size: 24px;

@@ -34,6 +34,16 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/VonAndVshow.vue')
     },
+    {
+      path: '/Props',
+      name: 'Props',
+      component: () => import('../views/Props.vue')
+    },
+    {
+      path: '/Emit',
+      name: 'Emit',
+      component: () => import('../views/Emit.vue')
+    },
   ]
 })
 
