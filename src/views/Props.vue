@@ -1,6 +1,7 @@
 <script>
 import vprops from '../components/PropsComponents.vue'
-
+import location from '../stores/location'
+import {mapActions} from 'pinia'
 export default{
     data() {
         return {
@@ -13,7 +14,13 @@ export default{
     },
     components:{
         vprops,
-    }
+    },
+    methods: {
+        ...mapActions(location ,["setpages"])
+    },
+    mounted() {
+        this.setpages(5)
+    },
 }
 </script>
 

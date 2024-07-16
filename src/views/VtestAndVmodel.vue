@@ -1,6 +1,7 @@
 <script>
-import { vModelText } from 'vue';
-
+import { vModelText } from 'vue'
+import location from '../stores/location'
+import {mapActions} from 'pinia'
 export default{
     data(){ //data:function()
         return{
@@ -10,7 +11,13 @@ export default{
             modelRadio:"",
             modelSelect:"",
         }
-    }
+    },
+    methods: {
+        ...mapActions(location ,["setpages"])
+    },
+    mounted() {
+        this.setpages(2)
+    },
 }
 </script>
 

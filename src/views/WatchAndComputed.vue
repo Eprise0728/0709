@@ -1,25 +1,26 @@
 <script>
-import vfor from '../components/VforComponent.vue'
-import vbind from '../components/VbindComponent.vue'
+import Watch from '../components/Watched.vue'
+import Computeds from '../components/Computeds.vue'
 import location from '../stores/location'
 import {mapActions} from 'pinia'
 export default{
     components:{
-        vfor,
-        vbind
+        Watch,
+        Computeds,
     },
     methods: {
         ...mapActions(location ,["setpages"])
     },
     mounted() {
-        this.setpages(3)
+        this.setpages(7)
     },
 }
 </script>
 
 <template>
-    <vfor />
-    <vbind />
+    <Watch />
+    <Computeds />
+    
 </template>
 
 <style scoped lang="scss"></style>

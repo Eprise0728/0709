@@ -1,5 +1,14 @@
 <script>
-
+import location from '../stores/location'
+import {mapActions} from 'pinia'
+export default{
+    methods: {
+        ...mapActions(location ,["setpages"])
+    },
+    mounted() {
+        this.setpages(1)
+    },
+}
 </script>
 
 <template>
