@@ -6,6 +6,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/:pathMath(.*)*',
+      name: 'Notfound',
+      component: () => import('../views/Notfound.vue')
+    },
+    {
       path: '/',
       name: 'home',
       component: HomeView
@@ -49,6 +54,12 @@ const router = createRouter({
       name: 'WatchAndComputed',
       component: () => import('../views/WatchAndComputed.vue')
     },
+    {
+      path:'/Dynamic/:id',
+      name:'Dynamic',
+      props:true,
+      component:() => import('../views/Dynamic.vue')
+    }
   ]
 })
 
